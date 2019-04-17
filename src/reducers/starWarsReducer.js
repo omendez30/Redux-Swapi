@@ -5,9 +5,10 @@ import {
 } from "../actions";
 const initialState = {
   characters: [],
-  err: null,
-  isLoading: false
-  // Array characters, Boolean fetching, null error.
+  fetching: false,
+  error: ""
+
+  // Array characters, Boolean fetching, null erroror.
 };
 export const charsReducer = (state = initialState, action) => {
   // console.log("reducer", action);
@@ -15,20 +16,21 @@ export const charsReducer = (state = initialState, action) => {
     case FETCH_CHARACTER_START:
       return {
         ...state,
-        err: null,
-        isLoading: true
+        fetching: true,
+        error: ""
       };
     case FETCH_CHARACTER_SUCCESS:
       return {
         ...state,
-        isLoading: false,
+        error: "",
+        fetching: false,
         characters: action.payload
       };
     case FETCH_CHARACTER_FAILURE:
       return {
         ...state,
-        isloading: false,
-        err: action.payload
+        fetching: false,
+        error: action.payload
       };
 
     // Fill me in with the important reducers
