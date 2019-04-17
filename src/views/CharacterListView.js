@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import { CharacterList } from "../components";
 // import actions
+import { getCharacter } from "../actions";
 
 class CharacterListView extends React.Component {
   constructor() {
@@ -11,6 +12,7 @@ class CharacterListView extends React.Component {
 
   componentDidMount() {
     // call our action
+    this.props.getCharacter();
   }
 
   render() {
