@@ -3,3 +3,20 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.CharactersList_wrapper {
+  background: linear-gradient(#456f26, #256);
+  display: flex;
+}
+ul {
+  border: 1px solid salmon;
+  margin: 0 auto;
+  line-height: 20px;
+  width: 50%;
+}
+ul li {
+  color: whitesmoke;
+  padding: 30px;
+  font-size: 2em;
+  list-style-type: none;
+  text-align: center;
+}
